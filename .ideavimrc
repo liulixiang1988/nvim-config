@@ -55,11 +55,13 @@ map <leader>, <Action>(Switcher)
 map <leader>/ <Action>(FindInPath)
 map <leader><leader> <Action>(GotoFile)
 map <leader>fr <Action>(RecentFiles)
-map <leader>fu <Action>(FindUsages)
 
 map <leader>gI <Action>(GotoImplementation)
 map <leader>gd <Action>(GotoDeclaration)
 map <leader>gS <Action>(GotoSuperMethod)
+map <leader>gr <Action>(FindUsages)
+
+map <leader>cd <Action>(EditorDuplicateLines)
 " options and mappings that are supported by both Vim and IdeaVim
 
 if has('ide')
