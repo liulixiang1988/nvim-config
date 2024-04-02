@@ -10,6 +10,9 @@ sudo apt install -y build-essential zlib1g-dev libssl-dev unzip
 sudo apt install -y libreadline-dev libsqlite3-dev \
                     libffi-dev libbz2-dev liblzma-dev
 
+# tools
+sudo apt install -y procps net-tools lsof sysstat
+
 
 curl -sS https://webi.sh/pathman | sh
 curl -sS https://webi.sh/aliasman | sh
@@ -43,15 +46,13 @@ wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 chmod +x dotnet-install.sh
 ./dotnet-install.sh --version latest
 rm -rf dotnet-install.sh
-RUN apt update -y \
-    && apt install -y procps net-tools lsof sysstat \
-    && dotnet tool install -g dotnet-counters \
-    && dotnet tool install -g dotnet-dump \
-    && dotnet tool install -g dotnet-gcdump \
-    && dotnet tool install -g dotnet-sos \
-    && dotnet tool install -g dotnet-symbol \
-    && dotnet tool install -g dotnet-trace \
-    && dotnet tool install -g dotnet-stack
+dotnet tool install -g dotnet-counters
+dotnet tool install -g dotnet-dump
+dotnet tool install -g dotnet-gcdump
+dotnet tool install -g dotnet-sos
+dotnet tool install -g dotnet-symbol
+dotnet tool install -g dotnet-trace
+dotnet tool install -g dotnet-stack
 
 pathman add ~/.dotnet
 pathman add ~/.dotnet/tools
