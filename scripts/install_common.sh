@@ -37,3 +37,10 @@ function install_docker() {
 
     sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 }
+
+function install_anaconda() {
+    echo "installing Anaconda"
+    wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+    bash /tmp/Anaconda3-2024.02-1-Linux-x86_64.sh -b -p $HOME/anaconda3
+    pathman add $HOME/anaconda3/bin
+}

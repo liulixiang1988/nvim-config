@@ -62,5 +62,5 @@ source ./common.sh
 source ./scripts/install_common.sh
 install_tmux
 install_docker
-
+install_anaconda
 
