@@ -38,6 +38,24 @@ curl -sS https://webi.sh/kubens | sh
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 sudo az aks install-cli
 
+# dotnet
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+chmod +x dotnet-install.sh
+./dotnet-install.sh --version latest
+rm -rf dotnet-install.sh
+RUN apt update -y \
+    && apt install -y procps net-tools lsof sysstat \
+    && dotnet tool install -g dotnet-counters \
+    && dotnet tool install -g dotnet-dump \
+    && dotnet tool install -g dotnet-gcdump \
+    && dotnet tool install -g dotnet-sos \
+    && dotnet tool install -g dotnet-symbol \
+    && dotnet tool install -g dotnet-trace \
+    && dotnet tool install -g dotnet-stack
+
+pathman add ~/.dotnet
+pathman add ~/.dotnet/tools
+
 # Check architecture and set it to a variable
 ARCH=$(uname -m)
 
