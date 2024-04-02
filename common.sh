@@ -5,3 +5,11 @@ if [ ! -d ~/.config/nvim ]; then
     git clone git@github.com:liulixiang1988/nvim-config.git ~/.config/nvim
 fi
 
+aliasman k "kubectl"
+aliasman kdp "kubectl describe po"
+aliasman kdd "kubectl describe deployment"
+aliasman kgd "kubectl get deployment"
+aliasman kgp "kubectl get po"
+aliasman kgs "kubectl get svc"
+aliasman kl "kubectl logs"
+

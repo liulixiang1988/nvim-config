@@ -4,7 +4,7 @@ sudo apt update -qq -y
 sudo apt upgrade -qq -y
 
 # required
-sudo apt install -y build-essential zlib1g-dev libssl-dev
+sudo apt install -y build-essential zlib1g-dev libssl-dev unzip
 
 # recommended
 sudo apt install -y libreadline-dev libsqlite3-dev \
@@ -36,6 +36,7 @@ curl -sS https://webi.sh/kubectx | sh
 curl -sS https://webi.sh/kubens | sh
 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+sudo az aks install-cli
 
 # Check architecture and set it to a variable
 ARCH=$(uname -m)

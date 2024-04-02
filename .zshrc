@@ -100,16 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias k="kubectl"
-alias kdp="kubectl describe po"
-alias kdd="kubectl describe deployment"
-alias kgd="kubectl get deployment"
-alias kgp="kubectl get po"
-alias kgs="kubectl get svc"
-alias kl="kubectl logs"
+
 alias t="telepresence"
-alias pip="python3 -m pip"
-alias python="python3"
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export GOPATH=$HOME/go
