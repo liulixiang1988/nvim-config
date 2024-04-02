@@ -106,6 +106,7 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export DOTNET_ROOT=$HOME/.dotnet
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
