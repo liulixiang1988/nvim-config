@@ -58,10 +58,10 @@ install_nvim
 install_lazygit
 install_ripgrep
 
-source ./common.sh
-
 source ./scripts/install_common.sh
 install_tmux
 install_docker
 install_anaconda
+
+source ./common.sh
 
