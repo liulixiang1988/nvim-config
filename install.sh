@@ -4,7 +4,6 @@ sudo apt update -qq -y
 sudo apt upgrade -qq -y
 
 # required
-sudo apt update
 sudo apt install -y build-essential zlib1g-dev libssl-dev
 
 # recommended
@@ -62,5 +61,6 @@ source ./common.sh
 
 source ./scripts/install_common.sh
 install_tmux
+install_docker
 
 
