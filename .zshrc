@@ -111,6 +111,10 @@ export DOTNET_ROOT=$HOME/.dotnet
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+# added by Webi for pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 export PATH="$PATH:/opt/mssql-tools/bin"
 export PATH="$PATH:~/.local/bin"
 export PATH="$PATH:~/.cargo/bin"

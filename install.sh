@@ -3,6 +3,14 @@
 sudo apt update -qq -y
 sudo apt upgrade -qq -y
 
+if [ "$1" = "zsh" ]; then
+    # zsh
+    sudo apt install -y zsh
+    chsh -s $(which zsh)
+    # ohmyzsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 # required
 sudo apt install -y build-essential zlib1g-dev libssl-dev unzip
 
