@@ -54,16 +54,18 @@ wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 chmod +x dotnet-install.sh
 ./dotnet-install.sh --version latest
 rm -rf dotnet-install.sh
-dotnet tool install -g dotnet-counters
-dotnet tool install -g dotnet-dump
-dotnet tool install -g dotnet-gcdump
-dotnet tool install -g dotnet-sos
-dotnet tool install -g dotnet-symbol
-dotnet tool install -g dotnet-trace
-dotnet tool install -g dotnet-stack
 
 pathman add ~/.dotnet
 pathman add ~/.dotnet/tools
+
+~/.dotnet/dotnet tool install -g dotnet-counters
+~/.dotnet/dotnet tool install -g dotnet-dump
+~/.dotnet/dotnet tool install -g dotnet-gcdump
+~/.dotnet/dotnet tool install -g dotnet-sos
+~/.dotnet/dotnet tool install -g dotnet-symbol
+~/.dotnet/dotnet tool install -g dotnet-trace
+~/.dotnet/dotnet tool install -g dotnet-stack
+
 
 # Check architecture and set it to a variable
 ARCH=$(uname -m)
