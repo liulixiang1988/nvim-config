@@ -1,14 +1,12 @@
 #!/bin/bash
 
+source ./scripts/install_common.sh
+
 sudo apt update -qq -y
 sudo apt upgrade -qq -y
 
 if [ "$1" = "zsh" ]; then
-    # zsh
-    sudo apt install -y zsh
-    chsh -s $(which zsh)
-    # ohmyzsh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    install_zsh
 fi
 
 # required
@@ -87,10 +85,8 @@ install_nvim
 install_lazygit
 install_ripgrep
 
-source ./scripts/install_common.sh
 install_tmux
 install_docker
 install_anaconda
 
 source ./common.sh
-
